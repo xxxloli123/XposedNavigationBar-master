@@ -1,0 +1,133 @@
+<!--
+  ~     Navigation bar function expansion module
+  ~     Copyright (C) 2017 egguncle cicadashadow@gmail.com
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<resources>
+    <string name="app_name">导航栏扩展模块</string>
+    <string name="switch_app">模块总开关(重启后生效)</string>
+    <string name="about">
+        启动该模块后，点击导航栏左侧的小点，或者左划导航栏即可呼出快捷菜单，右划呼出音乐控制面板。
+        \n\n该模块供有虚拟导航栏的机型使用，目前仅在原生和CM ROM上进行过测试，部分功能可能在其他ROM上无法正常使用，如果激活模块以后反复出现“系统界面停止运行”导致手机无法正常使用，连接电脑使用adb指令“adb uninstall com.egguncle.xposednavigationbar”卸载该模块即可。
+    </string>
+    <string name="about_root_expand">
+        android6.0在使用expandSettingsPanel方法来下拉通知栏的时候，展开动画会变得十分缓慢，授予系统界面root权限，能够变通的解决这个问题，不授予root权限不会影响别的功能的使用。</string>
+    <string name="market">
+        如果有什么意见或者建议，可以点击这段文字在评论区留言或者给这个模块评分，也可以点击下面的文字查看二维码并捐赠，你的支持是我最大的动力。
+        \n
+    </string>
+    <string name="manual">
+        点击导航栏左侧的小点，或者左划导航栏即可呼出快捷菜单，右划呼出音乐控制面板。
+        \n
+        该模块供有虚拟导航栏的机型使用，目前仅在原生和CM ROM以及上进行过测试，部分功能可能在其他ROM上无法正常使用，如果激活模块以后反复出现“系统界面停止运行”导致手机无法正常使用，连接电脑使用adb指令“adb uninstall com.egguncle.xposednavigationbar”卸载该模块即可。
+        \n\n
+        Nougat上的Xposed的框架也可以使用，目前仅在魔趣上进行过测试。
+    </string>
+    <string name="version">版本号</string>
+    <string name="author">
+        联系作者 cicadashadow@gmail.com
+    </string>
+    <string name="app_github">
+        Github: https://github.com/EggUncle/XposedNavigationBar \n能给我一个小星星吗ヾ(●゜▽゜●)♡
+    </string>
+    <string name="about_open_source">
+        开源相关
+        \nXposed: https://github.com/rovo89/Xposed
+        \nlitepal: https://github.com/LitePalFramework/LitePal
+        \ngson: https://github.com/google/gson
+        \nHideableNavBar: https://github.com/ztc1997/HideableNavBar
+    </string>
+    <string name="about_app">
+        关于&amp;捐赠
+    </string>
+
+    <string name="no_select">
+        没有快捷方式了(╯°Д°）╯︵ /(.□ . \)
+    </string>
+    <string name="save">保存</string>
+    <string name="save_success">已保存</string>
+    <string name="need_reboot">重启后生效</string>
+    <string name="set_fun_dialog">
+        使用添加按钮添加新功能，列表项可以长按拖动来调整顺序，点击右上角保存按钮进行保存。
+    </string>
+    <string name="i_know">我知道了</string>
+    <string name="taps">提示</string>
+    <string name="nolonger_apper">不再显示</string>
+    <string name="taps_too_mang_sc">一页最多只能放10个(╯°Д°）╯︵ /(.□ . \)</string>
+    <string name="setting_btn">快捷按钮设置</string>
+    <string name="setting_other">其他设置</string>
+    <string name="home_point">主导航栏的小点位置</string>
+    <string name="clear_mem_level">内存清理强度</string>
+    <string name="select_shortcut">添加快捷按钮</string>
+    <string name="quick_notice">快速备忘</string>
+    <string name="icon_size">图标大小调整</string>
+    <string name="select_apps">请选择要添加的快捷方式</string>
+    <string name="delect_apps">请选择要删除的快捷方式</string>
+    <string name="ok">确定</string>
+    <string name="no">取消</string>
+    <string name="delete">删除</string>
+    <string name="root_request">授予root权限</string>
+    <string name="cant_start_act">无法启动这个应用</string>
+    <string name="taps_start_apps">如果该应用是被冻结在冰箱里，请授予root权限，模块会执行pm enable packageName进行解冻操作。</string>
+    <string name="about_language">Language</string>
+    <string name="set_language_success">Change language success , please reboot app.</string>
+    <string name="momo_history">备忘记录</string>
+    <string name="screen_shot_success">截图成功</string>
+    <string name="screen_shot_failed">截图失败</string>
+    <string name="clipboard">剪贴板</string>
+    <string name="clip_success">已复制到剪贴板</string>
+    <string name="alipay_donate">支付宝捐赠</string>
+    <string name="wechat_donate">微信捐赠</string>
+    <string name="paypal_donate">Paypal捐赠</string>
+    <string name="custom_icon">自定义</string>
+    <string name="command_taps">自定义指令可能造成程序或系统崩溃，如果你不会使用命令行，请不要使用这个功能。</string>
+    <string name="hook_90">hook横屏时的导航栏</string>
+    <string name="root_down">root下拉状态栏</string>
+    <string name="reboot_tips">好像出了一些问题。。重启试试看</string>
+    <string name="tab_set_func">快捷按钮设置</string>
+    <string name="tab_set_other">其他设置</string>
+    <string name="tab_momo_history">备忘历史</string>
+    <string name="about_manual">使用说明</string>
+    <string name="paypal_url">paypal.me/songyucheng</string>
+    <string name="not_activated">额...模块似乎没有被激活,如果已经更新请重启</string>
+    <string name="chameleon_navbar">导航栏变色(测试)</string>
+    <string name="chameleon_tip">这个功能目前不够稳定，可能导致某些应用无法打开</string>
+    <string name="navbar_height">导航栏高度</string>
+    <string name="navbar_vibrate">震动</string>
+    <string name="hide_app_icon">隐藏app图标</string>
+    <string-array name="shortcut_names">
+        <item>下拉通知</item>
+        <item>快速备忘</item>
+        <item>电源</item>
+        <item>清除通知</item>
+        <item>清理内存</item>
+        <item>调节声音</item>
+        <item>调节亮度</item>
+        <item>回到主导航栏</item>
+        <item>快捷启动应用菜单</item>
+        <item>上一曲</item>
+        <item>音乐开始暂停</item>
+        <item>下一曲</item>
+        <item>微信扫码</item>
+        <item>支付宝扫码</item>
+        <item>截图</item>
+        <item>返回键</item>
+        <item>主页键</item>
+        <item>最近任务键</item>
+        <item>剪贴板</item>
+        <item>shell指令(暂时停用)</item>
+        <item>隐藏导航栏</item>
+    </string-array>
+</resources>
