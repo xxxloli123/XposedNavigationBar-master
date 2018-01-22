@@ -40,6 +40,7 @@ import de.robv.android.xposed.XposedHelpers;
  */
 
 public class PhoneWindowHook {
+    private String string;
 //                                                            内部        方针
     private final static String PHONE_WINDOW_M = "com.android.internal.policy.PhoneWindow";
     private final static String PHONE_WINDOW = "com.android.internal.policy.impl.PhoneWindow";
